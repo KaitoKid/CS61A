@@ -113,6 +113,17 @@ def guess_linear():
         num_guesses += 1
         guess += 1
     return num_guesses
+
+def guess_linear2():
+    prompt_for_number(LOWER, UPPER)
+    num_guesses, correct = 0, False
+    guess = LOWER
+    while not correct:
+        correct = is_correct(guess)
+        num_guesses += 1
+        guess += 1
+    return num_guesses
+
 def guess_binary():
     """Return the number of attempted guesses. Implement a faster search
     algorithm that asks the user whether a guess is less than or greater than
