@@ -90,7 +90,7 @@ def c():
     return 3
 
 def t():
-    return 2
+    return 1
 
 def f():
     return 1
