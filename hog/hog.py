@@ -151,57 +151,57 @@ def play(strategy0, strategy1, score0=0, score1=0, goal=GOAL_SCORE):
 
     s0, s1 = score0, score1
 
-    # Check is_swap and swaps if necessary
-    def swap():
-        if is_swap(s0, s1):
-            s2 = s1
-            s0 = s1
-            s1 = s2
-
     # Check if anyone won
     def is_win(num1, num2):
-        if (num1 >= 100) or (num2 >= 100):
-            return score0, score1
+        return (num1 >= goal) or (num2 >= goal)
 
+
+    while True:
     # Player moves
-    def player_turn():
         dice = select_dice(s0, s1)
         strat = strategy0(s0, s1)
 
         # Piggy Back
-        if (s0 == 0):
+        if (take_turn(strat, s1, dice) == 0):
             s1 += strat
 
         # Actually rolls the dice
         result = take_turn(strat, s1, dice)
         s0 += result
 
-        swap()
-        is_win(s0, s1)
+        # swap
+        if is_swap(s0, s1):
+            s2 = s1
+            s1 = s0
+            s0 = s2
+
+        if is_win(s0, s1):
+            return s0, s1
+
 
     # Other moves
-    def other_turn():
         dice = select_dice(s1, s0)
-        strat = strategy0(s1, s0)
+        strat = strategy1(s1, s0)
 
         # Piggy Back
-        if (s1 == 0):
+        if (take_turn(strat, s0, dice) == 0):
             s0 += strat
 
         # Actually rolls the dice
         result = take_turn(strat, s0, dice)
         s1 += result
 
-        swap()
-        is_win(s0, s1)
+        # swap
+        if is_swap(s0, s1):
+            s2 = s1
+            s1 = s0
+            s0 = s2
 
-    # Keeps playing until there's a winner
-    while True:
-        player_turn()
-        other_turn()
+        if is_win(s0, s1):
+            return s0, s1
 
     # END Question 5
-    return score0, score1
+    return s0, s1
 
 
 #######################
