@@ -19,9 +19,29 @@ def roll_dice(num_rolls, dice=six_sided):
     assert type(num_rolls) == int, 'num_rolls must be an integer.'
     assert num_rolls > 0, 'Must roll at least once.'
     # BEGIN Question 1
-    "*** REPLACE THIS LINE ***"
+    final_score, pig_out = 0, False
+    while (num_rolls > 0):
+        roll = dice()
+        if roll == 1:
+            pig_out = True
+        final_score += roll
+        num_rolls -= 1
+
+    if pig_out:
+        return 0
+
+    return final_score
     # END Question 1
 
+
+def make_list (number):
+    temp_number, number_list = number, []
+    while temp_number > 0:
+        number_list.append(temp_number%10)
+        temp_number //= 10
+    if number < 10:
+        number_list.append(0)
+    return number_list
 
 def take_turn(num_rolls, opponent_score, dice=six_sided):
     """Simulate a turn rolling NUM_ROLLS dice, which may be 0 (Free Bacon).
@@ -30,12 +50,47 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
     opponent_score:  The total score of the opponent.
     dice:            A function of no args that returns an integer outcome.
     """
+    # Assume opponent_score is less than 100
+    # Implement free_bacon and hog_prime
+
     assert type(num_rolls) == int, 'num_rolls must be an integer.'
     assert num_rolls >= 0, 'Cannot roll a negative number of dice.'
     assert num_rolls <= 10, 'Cannot roll more than 10 dice.'
     assert opponent_score < 100, 'The game should be over.'
+
     # BEGIN Question 2
-    "*** REPLACE THIS LINE ***"
+
+    # Make hog_prime
+    def is_prime (number):
+        if number < 2:
+            return False
+        temp = 2
+        while (temp < number):
+            if number % temp == 0:
+                return False
+            temp += 1
+        return True
+
+    def next_prime (prime):
+        temp = prime + 1
+        while True:
+            if is_prime(temp):
+                return temp
+            temp += 1
+
+    def hog_prime(number):
+        if is_prime(number):
+            return next_prime(number)
+        return number
+
+    # Make list of opponent_score
+    opponent_score_list = make_list(opponent_score)
+
+    # Check free_bacon
+    if num_rolls == 0:
+        return hog_prime(max(opponent_score_list) + 1)
+
+    return hog_prime(roll_dice(num_rolls, dice))
     # END Question 2
 
 
@@ -44,7 +99,10 @@ def select_dice(score, opponent_score):
     multiple of 7, in which case select four-sided dice (Hog wild).
     """
     # BEGIN Question 3
-    "*** REPLACE THIS LINE ***"
+    # Hog wild
+    if (score + opponent_score)%7 == 0:
+        return four_sided
+    return six_sided
     # END Question 3
 
 
@@ -53,7 +111,14 @@ def is_swap(score0, score1):
     versions of each other, such as 19 and 91.
     """
     # BEGIN Question 4
-    "*** REPLACE THIS LINE ***"
+    # Swine swap
+    s0_list, s1_list, s0, s1 = [], [], score0%100, score1%100
+
+    # Make lists
+    s0_list = make_list(s0)
+    s1_list = make_list(s1)
+
+    return set(s0_list) == set(s1_list)
     # END Question 4
 
 
@@ -83,7 +148,58 @@ def play(strategy0, strategy1, score0=0, score1=0, goal=GOAL_SCORE):
     """
     player = 0  # Which player is about to take a turn, 0 (first) or 1 (second)
     # BEGIN Question 5
-    "*** REPLACE THIS LINE ***"
+
+    s0, s1 = score0, score1
+
+    # Check is_swap and swaps if necessary
+    def swap():
+        if is_swap(s0, s1):
+            s2 = s1
+            s0 = s1
+            s1 = s2
+
+    # Check if anyone won
+    def is_win(num1, num2):
+        if (num1 >= 100) or (num2 >= 100):
+            return score0, score1
+
+    # Player moves
+    def player_turn():
+        dice = select_dice(s0, s1)
+        strat = strategy0(s0, s1)
+
+        # Piggy Back
+        if (s0 == 0):
+            s1 += strat
+
+        # Actually rolls the dice
+        result = take_turn(strat, s1, dice)
+        s0 += result
+
+        swap()
+        is_win(s0, s1)
+
+    # Other moves
+    def other_turn():
+        dice = select_dice(s1, s0)
+        strat = strategy0(s1, s0)
+
+        # Piggy Back
+        if (s1 == 0):
+            s0 += strat
+
+        # Actually rolls the dice
+        result = take_turn(strat, s0, dice)
+        s1 += result
+
+        swap()
+        is_win(s0, s1)
+
+    # Keeps playing until there's a winner
+    while True:
+        player_turn()
+        other_turn()
+
     # END Question 5
     return score0, score1
 
