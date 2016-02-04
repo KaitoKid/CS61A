@@ -178,11 +178,10 @@ def play(strategy0, strategy1, score0=0, score1=0, goal=GOAL_SCORE):
     # Other moves
         dice = select_dice(s1, s0)
         strat = strategy1(s1, s0)
-
         # Actually rolls the dice
         result = take_turn(strat, s0, dice)
         # Piggy Back
-        if (take_turn(strat, s0, dice) == 0):
+        if (result == 0):
             s0 += strat
         s1 += result
 
@@ -246,7 +245,14 @@ def make_averaged(fn, num_samples=1000):
     not apply.
     """
     # BEGIN Question 6
-    "*** REPLACE THIS LINE ***"
+    def foo(*args):
+        temp = num_samples
+        sum = 0
+        while temp!= 0:
+            sum += fn(*args)
+            temp -= 1
+        return sum / num_samples
+    return foo
     # END Question 6
 
 
@@ -260,7 +266,12 @@ def max_scoring_num_rolls(dice=six_sided, num_samples=1000):
     10
     """
     # BEGIN Question 7
-    "*** REPLACE THIS LINE ***"
+    i = 1
+    averagedList = []
+    while (i < 11):
+        averagedList.append(make_averaged(roll_dice, 1000)(i, dice))
+        i += 1
+    return averagedList.index(max(averagedList)) + 1
     # END Question 7
 
 
