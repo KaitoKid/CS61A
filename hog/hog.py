@@ -50,28 +50,6 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
 
     # BEGIN Question 2
 
-    # Make hog_prime
-    def is_prime (number):
-        if number < 2:
-            return False
-        temp = 2
-        while (temp < number):
-            if number % temp == 0:
-                return False
-            temp += 1
-        return True
-
-    def next_prime (prime):
-        temp = prime + 1
-        while True:
-            if is_prime(temp):
-                return temp
-            temp += 1
-
-    def hog_prime(number):
-        if is_prime(number):
-            return next_prime(number)
-        return number
 
     # Make list of opponent_score
     opponent_score_list = list(map(int, str(opponent_score)))
@@ -83,6 +61,28 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
     return hog_prime(roll_dice(num_rolls, dice))
     # END Question 2
 
+# Make hog_prime
+def is_prime (number):
+    if number < 2:
+        return False
+    temp = 2
+    while (temp < number):
+        if number % temp == 0:
+            return False
+        temp += 1
+    return True
+
+def next_prime (prime):
+    temp = prime + 1
+    while True:
+        if is_prime(temp):
+            return temp
+        temp += 1
+
+def hog_prime(number):
+    if is_prime(number):
+        return next_prime(number)
+    return number
 
 def select_dice(score, opponent_score):
     """Select six-sided dice unless the sum of SCORE and OPPONENT_SCORE is a
@@ -343,12 +343,30 @@ def final_strategy(score, opponent_score):
     """Write a brief description of your final strategy.
 
     *** YOUR DESCRIPTION HERE ***
+
     """
     # BEGIN Question 10
-    "*** REPLACE THIS LINE ***"
-    return 5  # Replace this statement
-    # END Question 10
 
+    opponent_max_digit = max(list(map(int, str(opponent_score))))
+    dice = select_dice(score, opponent_score)
+    num_dice = 3
+
+    if dice == six_sided:
+        bacon_roll = bacon_strategy(score, opponent_score, margin=5, num_rolls=4)
+        swap_roll = swap_strategy(score, opponent_score, num_rolls=3)
+    elif dice == four_sided:
+        bacon_roll = bacon_strategy(score, opponent_score, margin=4, num_rolls=2)
+        swap_roll = swap_strategy(score, opponent_score, num_rolls=2)
+
+    # Check if it's a good swap
+    # Strats for 4 and 6 + Free_bacon should have different numbers
+    if (100 - score) == next_prime(opponent_max_digit + 1):
+        return 0
+    elif bacon_roll == 0:
+        return 0
+    elif swap_roll == 0:
+        return 0
+    return num_dice
 
 ##########################
 # Command Line Interface #
