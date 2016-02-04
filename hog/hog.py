@@ -33,16 +33,6 @@ def roll_dice(num_rolls, dice=six_sided):
     return final_score
     # END Question 1
 
-
-def make_list (number):
-    temp_number, number_list = number, []
-    while temp_number > 0:
-        number_list.append(temp_number%10)
-        temp_number //= 10
-    if number < 10:
-        number_list.append(0)
-    return number_list
-
 def take_turn(num_rolls, opponent_score, dice=six_sided):
     """Simulate a turn rolling NUM_ROLLS dice, which may be 0 (Free Bacon).
 
@@ -84,7 +74,7 @@ def take_turn(num_rolls, opponent_score, dice=six_sided):
         return number
 
     # Make list of opponent_score
-    opponent_score_list = make_list(opponent_score)
+    opponent_score_list = list(map(int, str(opponent_score)))
 
     # Check free_bacon
     if num_rolls == 0:
@@ -112,13 +102,20 @@ def is_swap(score0, score1):
     """
     # BEGIN Question 4
     # Swine swap
-    s0_list, s1_list, s0, s1 = [], [], score0%100, score1%100
-
-    # Make lists
-    s0_list = make_list(s0)
-    s1_list = make_list(s1)
-
-    return set(s0_list) == set(s1_list)
+    a = score0
+    b = a % 10
+    a = a - b
+    a = a // 10
+    c = a % 10
+    d = score1
+    e = d%10
+    d = d-e
+    d = d//10
+    f = d%10
+    if b == f and c == e:
+        return True
+    else:
+        return False
     # END Question 4
 
 
@@ -161,12 +158,11 @@ def play(strategy0, strategy1, score0=0, score1=0, goal=GOAL_SCORE):
         dice = select_dice(s0, s1)
         strat = strategy0(s0, s1)
 
-        # Piggy Back
-        if (take_turn(strat, s1, dice) == 0):
-            s1 += strat
-
         # Actually rolls the dice
         result = take_turn(strat, s1, dice)
+        # Piggy Back
+        if (result == 0):
+            s1 += strat
         s0 += result
 
         # swap
@@ -183,12 +179,11 @@ def play(strategy0, strategy1, score0=0, score1=0, goal=GOAL_SCORE):
         dice = select_dice(s1, s0)
         strat = strategy1(s1, s0)
 
+        # Actually rolls the dice
+        result = take_turn(strat, s0, dice)
         # Piggy Back
         if (take_turn(strat, s0, dice) == 0):
             s0 += strat
-
-        # Actually rolls the dice
-        result = take_turn(strat, s0, dice)
         s1 += result
 
         # swap
