@@ -349,7 +349,7 @@ def final_strategy(score, opponent_score):
 
     opponent_max_digit = max(list(map(int, str(opponent_score))))
     dice = select_dice(score, opponent_score)
-    num_dice = 3
+    num_dice = 4
 
     if dice == six_sided:
         bacon_roll = bacon_strategy(score, opponent_score, margin=5, num_rolls=4)
@@ -358,14 +358,31 @@ def final_strategy(score, opponent_score):
         bacon_roll = bacon_strategy(score, opponent_score, margin=4, num_rolls=2)
         swap_roll = swap_strategy(score, opponent_score, num_rolls=2)
 
-    # Check if it's a good swap
-    # Strats for 4 and 6 + Free_bacon should have different numbers
+    # Make your opponent get the 4 dice, lowers my win rate though
+    """
+            elif (score + opponent_score) % 7 < 7:
+            return 7 - ((score + opponent_score) % 7)
+
+    """
+
+    # Pig out if opponent will swap once you pig out
+
     if (100 - score) == next_prime(opponent_max_digit + 1):
-        return 0
-    elif bacon_roll == 0:
         return 0
     elif swap_roll == 0:
         return 0
+    elif bacon_roll == 0:
+        return 0
+    elif dice == four_sided:
+        return 1
+    elif is_swap(score, opponent_score+10):
+        return 10
+    elif is_swap(score, opponent_score+9):
+        return 9
+    elif is_swap(score, opponent_score+8):
+        return 8
+    elif is_swap(score, opponent_score+7):
+        return 7
     return num_dice
 
 ##########################
