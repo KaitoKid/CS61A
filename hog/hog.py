@@ -352,11 +352,11 @@ def final_strategy(score, opponent_score):
     num_dice = 4
 
     if dice == six_sided:
-        bacon_roll = bacon_strategy(score, opponent_score, margin=5, num_rolls=4)
+        bacon_roll = bacon_strategy(score, opponent_score, margin=6, num_rolls=3)
         swap_roll = swap_strategy(score, opponent_score, num_rolls=3)
     elif dice == four_sided:
-        bacon_roll = bacon_strategy(score, opponent_score, margin=4, num_rolls=2)
-        swap_roll = swap_strategy(score, opponent_score, num_rolls=2)
+        bacon_roll = bacon_strategy(score, opponent_score, margin=5, num_rolls=3)
+        swap_roll = swap_strategy(score, opponent_score, num_rolls=3)
 
     # Make your opponent get the 4 dice, lowers my win rate though
     """
@@ -383,6 +383,8 @@ def final_strategy(score, opponent_score):
         return 8
     elif is_swap(score, opponent_score+7):
         return 7
+    elif (score + opponent_score) % 7 < 7:
+        return 7 - ((score + opponent_score) % 7)
     return num_dice
 
 ##########################
