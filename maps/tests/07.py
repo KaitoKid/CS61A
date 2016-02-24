@@ -5,7 +5,7 @@ test = {
     {
       'cases': [
         {
-          'answer': '7b94a2861b435311f9fceeb5e6f092c4',
+          'answer': 'the extracted values for each restaurant in restaurants',
           'choices': [
             'the restaurants in restaurants',
             'the names of restaurants in restaurants',
@@ -13,11 +13,11 @@ test = {
             'the restaurants reviewed by user'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What does the list xs represent?'
         },
         {
-          'answer': '901ae86eb8ae688b7a7ca7c1f77cab35',
+          'answer': 'the ratings for the restaurants in restaurants',
           'choices': [
             'the ratings for the restaurants reviewed by user',
             'the ratings for the restaurants in restaurants',
@@ -25,7 +25,7 @@ test = {
             'the names for the restaurants in restaurants'
           ],
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'question': 'What does the list ys represent?'
         }
       ],

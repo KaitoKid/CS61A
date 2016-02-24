@@ -112,9 +112,26 @@ def find_predictor(user, restaurants, feature_fn):
     xs = [feature_fn(r) for r in restaurants]
     ys = [reviews_by_user[restaurant_name(r)] for r in restaurants]
 
+#    print(xs)
+#    print(ys)
     # BEGIN Question 7
-    "*** REPLACE THIS LINE ***"
-    b, a, r_squared = 0, 0, 0  # REPLACE THIS LINE WITH YOUR SOLUTION
+    mean_x = mean(xs)
+    mean_y = mean(ys)
+    S_xx = sum([(i - mean_x)**2 for i in xs])
+    S_yy = sum([(i - mean_y)**2 for i in ys])
+
+#    print([(i - mean_x)**2 for i in xs])
+#    print([(i - mean_y)**2 for i in ys])
+    zipped_xy = zip(xs, ys)
+    S_xy = sum([(i[0] - mean_x) * (i[1] - mean_y) for i in zipped_xy])
+
+#    print(S_xx)
+#    print(S_yy)
+    b = S_xy/S_xx
+    a, r_squared = mean_y - b*mean_x, (S_xy**2) / (S_xx * S_yy)
+#    print(b)
+#    print(a)
+#    print(r_squared)# REPLACE THIS LINE WITH YOUR SOLUTION
     # END Question 7
 
     def predictor(restaurant):
@@ -134,7 +151,16 @@ def best_predictor(user, restaurants, feature_fns):
     """
     reviewed = user_reviewed_restaurants(user, restaurants)
     # BEGIN Question 8
-    "*** REPLACE THIS LINE ***"
+    total_pairs = []
+    list_of_rs = []
+    index = 0
+    while index < len(feature_fns):
+        a , b = find_predictor(user, reviewed, feature_fns[index])
+        total_pairs += [[a , b]]
+        list_of_rs += [b]
+        index += 1
+    largest_index = list_of_rs.index(max(list_of_rs))
+    return total_pairs[largest_index][0]
     # END Question 8
 
 
@@ -150,7 +176,18 @@ def rate_all(user, restaurants, feature_fns):
     predictor = best_predictor(user, ALL_RESTAURANTS, feature_fns)
     reviewed = user_reviewed_restaurants(user, restaurants)
     # BEGIN Question 9
-    "*** REPLACE THIS LINE ***"
+    restaurant_dic = dict()
+    index = 0
+    while index < len(restaurants):
+        res_name = restaurant_name(restaurants[index])
+        if res_name in reviewed:
+            rating = int(user_rating(user, res_name))
+            print('i came in')
+        else:
+            rating = predictor(restaurants[index])
+        restaurant_dic[res_name] = rating
+        index += 1
+    return restaurant_dic
     # END Question 9
 
 
