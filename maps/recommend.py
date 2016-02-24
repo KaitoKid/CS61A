@@ -177,12 +177,16 @@ def rate_all(user, restaurants, feature_fns):
     reviewed = user_reviewed_restaurants(user, restaurants)
     # BEGIN Question 9
     restaurant_dic = dict()
+    list_of_names = []
     index = 0
+    index2 = 0
+    while index2 < len(reviewed):
+        list_of_names += restaurant_name(reviewed[index2])
+        index2 += 1
     while index < len(restaurants):
         res_name = restaurant_name(restaurants[index])
-        if res_name in reviewed:
+        if res_name in list_of_names:
             rating = int(user_rating(user, res_name))
-            print('i came in')
         else:
             rating = predictor(restaurants[index])
         restaurant_dic[res_name] = rating
@@ -199,7 +203,13 @@ def search(query, restaurants):
     restaurants -- A sequence of restaurants
     """
     # BEGIN Question 10
-    "*** REPLACE THIS LINE ***"
+    index = 0
+    list_of_restaurants = []
+    while index < len(restaurants):
+        if query in restaurant_categories(restaurants[index]):
+            list_of_restaurants += [restaurants[index]]
+        index += 1
+    return list_of_restaurants
     # END Question 10
 
 
