@@ -1,0 +1,22 @@
+{
+    "name": "Lab 3",
+    "endpoint": "cal/cs61a/sp16/lab04",
+    "src": [
+        "lab04.py",
+        "lab04_extra.py"
+    ],
+    "tests": {
+        "tests/lists.py": "ok_test",
+        "tests/sevens.py": "ok_test",
+        "lab04.py": "doctest",
+        "lab04_extra.py": "doctest"
+    },
+    "protocols": [
+        "restore",
+        "file_contents",
+        "analytics",
+        "unlock",
+        "grading",
+        "backup"
+    ]
+}

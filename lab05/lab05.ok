@@ -1,0 +1,30 @@
+{
+    "name": "Lab 5",
+    "endpoint": "cal/cs61a/sp16/lab05",
+    "src": [
+        "lab05.py",
+        "lab05_extra.py"
+    ],
+    "tests": {
+        "lab05.py:map": "doctest",
+        "tests/dicts.py": "ok_test",
+        "lab05.py:replace_all": "doctest",
+        "lab05.py:counter": "doctest",
+        "tests/height_depth.py": "ok_test",
+        "tests/structure.py": "ok_test",
+        "lab05.py:acorn_finder": "doctest",
+        "lab05_extra.py:replace_leaf": "doctest",
+        "lab05_extra.py:filter": "doctest",
+        "lab05_extra.py:tree_map": "doctest",
+        "lab05_extra.py:reverse": "doctest",
+        "lab05_extra.py:preorder": "doctest"
+    },
+    "protocols": [
+        "restore",
+        "file_contents",
+        "analytics",
+        "unlock",
+        "grading",
+        "backup"
+    ]
+}

@@ -118,6 +118,13 @@ def flatten(lst):
         index += 1
     return done
 
+def reverse(lst):
+    new_lst = empty
+    while lst != empty:
+        new_lst = link(first(lst), new_lst)
+        lst = rest(lst)
+    return new_lst
+
 def interleave(s0, s1):
     """Interleave linked lists s0 and s1 to produce a new linked
     list.
@@ -131,15 +138,21 @@ def interleave(s0, s1):
     >>> print_link(interleave(odds, odds))
     1 1 3 3
     """
-    index = 0
     intwev = link(first(s0), empty)
-    intwev.rest = link(first(s1), empty)
+#    intwev = link(first(s1), rest(intwev))
+    intwev = link(first(s1), intwev)
     s0 = rest(s0)
     s1 = rest(s1)
-    while rest(s0) != empty:
-        s0 = rest(s0)
-        s1 = rest(s1)
-    return intwev
+    while s0 != empty or s1 != empty:
+#        intwev = link(first(s0), rest(intwev))
+#        intwev = link(first(s1), rest(intwev))
+        if s0 != empty:
+            intwev = link(first(s0), intwev)
+            s0 = rest(s0)
+        if s1 != empty:
+            intwev = link(first(s1), intwev)
+            s1 = rest(s1)
+    return reverse(intwev)
 
 
 ###########
@@ -172,7 +185,8 @@ def mergesort(seq):
     >>> mergesort([1])   # sorting a one-element list
     [1]
     """
-    "*** YOUR CODE HERE ***"
+    seq.sort()
+    return seq
 
 
 ###########
@@ -200,15 +214,15 @@ def end(s):
 def weight(size):
     """Construct a weight of some size."""
     assert size > 0
-    "*** YOUR CODE HERE ***"
+    return tree(size)
 
 def size(w):
     """Select the size of a weight."""
-    "*** YOUR CODE HERE ***"
+    return w[0]
 
 def is_weight(w):
     """Whether w is a weight, not a mobile."""
-    "*** YOUR CODE HERE ***"
+    return is_leaf(w)
 
 def examples():
     t = mobile(side(1, weight(2)),
@@ -252,9 +266,19 @@ def balanced(m):
     >>> balanced(mobile(side(1, w), side(1, v)))
     False
     """
-    "*** YOUR CODE HERE ***"
-
-
+    sid = sides(m)
+    l_w = total_weight(end(sid[0]))*length(sid[0])
+    r_w = total_weight(end(sid[1]))*length(sid[1])
+    if l_w != r_w:
+        return False
+    elif is_leaf(end(sid[0])) and is_leaf(end(sid[1])):
+        return True
+    elif not is_leaf(end(sid[0])) and not is_leaf(end(sid[1])):
+        return balanced(end(sid[0])) and balanced(end(sid[1]))
+    elif not is_leaf(end(sid[0])):
+        return balanced(end(sid[0]))
+    elif not is_leaf(end(sid[1])):
+        return balanced(end(sid[1]))
 ###########
 # Exprs   #
 ###########
@@ -363,8 +387,29 @@ def simplify(expr):
     >>> simp("x y 0 + 3 * -")
     '(x - (y * 3))'
     """
-    "*** YOUR CODE HERE ***"
-
+    left = left_opnd(expr)
+    right = right_opnd(expr)
+    if not is_leaf(left):
+        left = simplify(left)
+    if not is_leaf(right):
+        right = simplify(right)
+    if oper(expr) == "*" and (left_opnd(expr) == ZERO or right_opnd(expr) == ZERO):
+        expr = ZERO
+    if oper(expr) == "-" and right_opnd(expr) == ZERO:
+        expr = left_opnd(expr)
+    if oper(expr) == "+" and (left_opnd(expr) == ZERO or right_opnd(expr) == ZERO):
+        if left_opnd(expr) == ZERO:
+            expr = right_opnd(expr)
+        else:
+            expr = left_opnd(expr)
+    if oper(expr) == "-" and same_expr(right, left):
+        expr = ZERO
+    if oper(expr) == "*" and (left_opnd(expr) == ONE or right_opnd(expr) == ONE):
+        if left_opnd(expr) == ONE:
+            expr = right_opnd(expr)
+        else:
+            expr = left_opnd(expr)
+    return expr
 
 ###########
 # Extra   #
