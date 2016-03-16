@@ -1,0 +1,30 @@
+{
+    "name": "Lab 6",
+    "endpoint": "cal/cs61a/sp16/lab06",
+    "src": [
+        "classes.py",
+        "data.py",
+        "lab06.py",
+        "lab06_extra.py"
+    ],
+    "tests": {
+        "tests/prologue.py": "ok_test",
+        "tests/car.py": "ok_test",
+        "tests/me.py": "ok_test",
+        "classes.py:Player.go_to": "doctest",
+        "classes.py:Player.talk_to": "doctest",
+        "classes.py:Player.take": "doctest",
+        "classes.py:Player.unlock": "doctest",
+        "classes.py:Player.knapsack": "doctest",
+        "lab06.py": "doctest",
+        "lab06_extra.py": "doctest"
+    },
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}

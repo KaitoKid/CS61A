@@ -409,6 +409,7 @@ def simplify(expr):
             expr = right_opnd(expr)
         else:
             expr = left_opnd(expr)
+    print(expr)
     return expr
 
 ###########
