@@ -47,3 +47,32 @@ server is http://54.249.141.255:1127/post
 maximum 128 reports/day
 reporter is electron-crash-service
 [2412:5804:0315/204843:ERROR:crash_service.cc(301)] could not start dumper
+[2644:5528:0315/225233:VERBOSE1:crash_service.cc(331)] client end. pid = 8460
+[2644:5528:0315/225233:VERBOSE1:crash_service.cc(331)] client end. pid = 7232
+[2644:5528:0315/225234:VERBOSE1:crash_service.cc(352)] zero clients. exiting
+[2644:4008:0315/225234:VERBOSE1:crash_service.cc(490)] session ending..
+[2644:4008:0315/225234:VERBOSE1:crash_service.cc(495)] clients connected :2
+clients terminated :2
+dumps serviced :0
+dumps reported :0
+[2644:4008:0315/225234:VERBOSE1:crash_service_main.cc(89)] Session end. return code is 0
+[4436:1008:0316/211218:VERBOSE1:crash_service_main.cc(68)] Session start. cmdline is [--reporter-url=http://54.249.141.255:1127/post --application-name=Atom --v=1]
+[4436:1008:0316/211218:VERBOSE1:crash_service.cc(142)] window handle is 00250622
+[4436:1008:0316/211218:VERBOSE1:crash_service.cc(290)] pipe name is \\.\pipe\Atom Crash Service
+dumps at 
+[4436:1008:0316/211218:VERBOSE1:crash_service.cc(294)] checkpoint is crash_checkpoint.txt
+server is http://54.249.141.255:1127/post
+maximum 128 reports/day
+reporter is electron-crash-service
+[4436:1008:0316/211218:VERBOSE1:crash_service_main.cc(84)] Ready to process crash requests
+[4436:4888:0316/211218:VERBOSE1:crash_service.cc(323)] client start. pid = 5404
+[4436:4888:0316/211218:VERBOSE1:crash_service.cc(323)] client start. pid = 3364
+[7824:12272:0316/211218:VERBOSE1:crash_service_main.cc(68)] Session start. cmdline is [--reporter-url=http://54.249.141.255:1127/post --application-name=Atom --v=1]
+[7824:12272:0316/211218:VERBOSE1:crash_service.cc(142)] window handle is 000A0770
+[7824:12272:0316/211218:VERBOSE1:crash_service.cc(290)] pipe name is \\.\pipe\Atom Crash Service
+dumps at 
+[7824:12272:0316/211218:VERBOSE1:crash_service.cc(294)] checkpoint is crash_checkpoint.txt
+server is http://54.249.141.255:1127/post
+maximum 128 reports/day
+reporter is electron-crash-service
+[7824:12272:0316/211218:ERROR:crash_service.cc(301)] could not start dumper

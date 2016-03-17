@@ -577,7 +577,18 @@ def make_slow(action):
     action -- An action method of some Bee
     """
     # BEGIN Problem EC
-    "*** REPLACE THIS LINE ***"
+    def new_action(durationRemaining):
+        def new_action2(colony):
+            nonlocal durationRemaining
+
+            if durationRemaining > 0:
+                durationRemaining -= 1
+                if colony.time%2 == 0:
+                    return action(colony)
+            else:
+                return action(colony)
+        return new_action2
+    return new_action
     # END Problem EC
 
 def make_stun(action):
@@ -586,13 +597,23 @@ def make_stun(action):
     action -- An action method of some Bee
     """
     # BEGIN Problem EC
-    "*** REPLACE THIS LINE ***"
+    def new_action(durationRemaining):
+        def new_action2(colony):
+            nonlocal durationRemaining
+
+            if durationRemaining > 0:
+                durationRemaining -= 1
+                pass
+            else:
+                return action(colony)
+        return new_action2
+    return new_action
     # END Problem EC
 
 def apply_effect(effect, bee, duration):
     """Apply a status effect to a Bee that lasts for duration turns."""
     # BEGIN Problem EC
-    "*** REPLACE THIS LINE ***"
+    setattr(bee, 'action', effect(bee.action)(duration))
     # END Problem EC
 
 
@@ -601,7 +622,8 @@ class SlowThrower(ThrowerAnt):
 
     name = 'Slow'
     # BEGIN Problem EC
-    "*** REPLACE THIS LINE ***"
+    food_cost = 4
+    damage = 0
     implemented = False   # Change to True to view in the GUI
     # END Problem EC
 
@@ -615,7 +637,8 @@ class StunThrower(ThrowerAnt):
 
     name = 'Stun'
     # BEGIN Problem EC
-    "*** REPLACE THIS LINE ***"
+    food_cost = 6
+    damage = 0
     implemented = False   # Change to True to view in the GUI
     # END Problem EC
 
