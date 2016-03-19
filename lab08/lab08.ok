@@ -1,0 +1,26 @@
+{
+    "name": "Lab 8",
+    "endpoint": "cal/cs61a/sp16/lab08",
+    "src": [
+        "lab08.py",
+        "lab08_extra.py"
+    ],
+    "tests": {
+        "tests/sets.py": "ok_test",
+        "lab08.py:find_duplicates": "doctest",
+        "lab08.py:pow": "doctest",
+        "lab08_extra.py:is_prime_sqrt": "doctest",
+        "lab08_extra.py:find_duplicates_k": "doctest",
+        "lab08_extra.py:size": "doctest",
+        "lab08_extra.py:tree_to_ordered_link": "doctest",
+        "lab08_extra.py:next_element": "doctest"
+    },
+    "protocols": [
+        "restore",
+        "file_contents",
+        "unlock",
+        "grading",
+        "analytics",
+        "backup"
+    ]
+}
