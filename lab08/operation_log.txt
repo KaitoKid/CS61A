@@ -18,3 +18,12 @@ server is http://54.249.141.255:1127/post
 maximum 128 reports/day
 reporter is electron-crash-service
 [2168:13144:0318/141116:ERROR:crash_service.cc(301)] could not start dumper
+[1880:592:0318/184822:VERBOSE1:crash_service.cc(331)] client end. pid = 13076
+[1880:592:0318/184822:VERBOSE1:crash_service.cc(331)] client end. pid = 12948
+[1880:592:0318/184823:VERBOSE1:crash_service.cc(352)] zero clients. exiting
+[1880:548:0318/184823:VERBOSE1:crash_service.cc(490)] session ending..
+[1880:548:0318/184823:VERBOSE1:crash_service.cc(495)] clients connected :2
+clients terminated :2
+dumps serviced :0
+dumps reported :0
+[1880:548:0318/184823:VERBOSE1:crash_service_main.cc(89)] Session end. return code is 0

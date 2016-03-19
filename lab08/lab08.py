@@ -30,6 +30,6 @@ def pow(n,k):
     if (k == 1):
         return n
     if (k%2 == 0):
-        return pow(n*n, k/2)
+        return pow(n*n, k//2)
     else:
-        return n * pow(n*n, k/2)
+        return n * pow(n*n, k//2)
