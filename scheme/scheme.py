@@ -103,12 +103,10 @@ class Frame:
         if len(formals) != len(vals):
             raise SchemeError("ur arguments dont add up bruv")
 
-        i = 0
-        while i < len(formals):
-            child.define(str(formals.first), vals.first)
-            formals.first = formals.second
-            vals.first = vals.second
-            i += 1
+        while formals != nil:
+            child.define(formals.first, vals.first)
+            formals = formals.second
+            vals = vals.second
         # END Question 10
         return child
 
@@ -189,7 +187,9 @@ class LambdaProcedure(UserDefinedProcedure):
         """Make a frame that binds the my formal parameters to ARGS, a
         Scheme list of values, for a call evaluated in environment env."""
         # BEGIN Question 12
-        "*** REPLACE THIS LINE ***"
+        f = Frame(self.env)
+        c = f.make_child_frame(self.formals, args)
+        return c
         # END Question 12
 
     def __str__(self):
@@ -263,23 +263,52 @@ def do_if_form(expressions, env):
     """Evaluate an if form."""
     check_form(expressions, 2, 3)
     # BEGIN Question 13
-    "*** REPLACE THIS LINE ***"
+    boo = scheme_eval(expressions.first, env)
+    not_have_second_expression = expressions.second.second == nil
+    if scheme_true(boo):
+        return scheme_eval(expressions.second.first, env)
+    else:
+        if not_have_second_expression:
+            return None
+        else:
+            return scheme_eval(expressions.second.second.first, env)
     # END Question 13
 
 def do_and_form(expressions, env):
     """Evaluate a short-circuited and form."""
     # BEGIN Question 14B
-    "*** REPLACE THIS LINE ***"
+
+    if expressions == nil:
+        return True
+
+    last = nil
+    while expressions != nil:
+        temp = scheme_eval(expressions.first, env)
+        if scheme_false(temp):
+            return False
+        else:
+            last = temp
+        expressions = expressions.second
+    return last
     # END Question 14B
 
 def do_or_form(expressions, env):
     """Evaluate a short-circuited or form."""
     # BEGIN Question 14B
-    "*** REPLACE THIS LINE ***"
+    if expressions == nil:
+        return False
+
+    while expressions != nil:
+        temp = scheme_eval(expressions.first, env)
+        if scheme_true(temp):
+            return temp
+        expressions = expressions.second
+    return False
     # END Question 14B
 
 def do_cond_form(expressions, env):
     """Evaluate a cond form."""
+    print(expressions.first)
     num_clauses = len(expressions)
     i = 0
     while expressions is not nil:
@@ -290,7 +319,7 @@ def do_cond_form(expressions, env):
                 raise SchemeError("else must be last")
             test = True
         # BEGIN Question 15A
-        "*** REPLACE THIS LINE ***"
+
         # END Question 15A
         expressions = expressions.second
         i += 1
@@ -347,7 +376,14 @@ def check_formals(formals):
     >>> check_formals(read_line("(a b c)"))
     """
     # BEGIN Question 11B
-    "*** REPLACE THIS LINE ***"
+    formalslist = []
+    while formals != nil:
+        if not scheme_symbolp(formals.first):
+            raise SchemeError("Invalid formal type")
+        if formals.first in formalslist:
+            raise SchemeError("U dun goofed on the formals")
+        formalslist.append(formals.first)
+        formals = formals.second
     # END Question 11B
 
 #################
