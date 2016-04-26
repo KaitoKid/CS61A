@@ -10,6 +10,15 @@
 ;;; *** Add more of your own here! ***
 ;;; **********************************
 
+
+(load 'questions)
+(list-change 5 (list 2 1))
+; expect ((2 2 1) (2 1 1 1) (1 1 1 1 1))
+
+(exit)
+(cons-all 1 '((2 2 2) (3 3 3) (4 4 4)))
+; expect ((1 2 2 2) (1 3 3 3) (1 4 4 4))
+
 ;;; These are examples from several sections of "The Structure
 ;;; and Interpretation of Computer Programs" by Abelson and Sussman.
 
@@ -606,4 +615,3 @@ one-through-four
               (sum (- m 1) (+ m total)))))))))
 (sum 1001 0)
 ; expect 501501
-

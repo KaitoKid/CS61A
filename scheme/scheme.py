@@ -308,9 +308,9 @@ def do_or_form(expressions, env):
 
 def do_cond_form(expressions, env):
     """Evaluate a cond form."""
-    print(expressions.first)
     num_clauses = len(expressions)
     i = 0
+    test = False
     while expressions is not nil:
         clause = expressions.first
         check_form(clause, 1)
@@ -319,7 +319,13 @@ def do_cond_form(expressions, env):
                 raise SchemeError("else must be last")
             test = True
         # BEGIN Question 15A
-
+        if test:
+            return scheme_eval(clause.second.first, env)
+        temp = scheme_eval(clause.first, env)
+        if scheme_true(temp):
+            if clause.second:
+                return eval_all(clause.second, env)
+            return temp
         # END Question 15A
         expressions = expressions.second
         i += 1
@@ -338,7 +344,17 @@ def make_let_frame(bindings, env):
     if not scheme_listp(bindings):
         raise SchemeError("bad bindings list in let form")
     # BEGIN Question 16
-    "*** REPLACE THIS LINE ***"
+    f = nil
+    v = nil
+    while bindings != nil:
+        check_form(bindings.first, 2, 2)
+        if not scheme_symbolp(bindings.first.first):
+            raise SchemeError("bad formal in let form")
+        f = Pair(bindings.first.first, f)
+        v = Pair(scheme_eval(bindings.first.second.first, env), v)
+        bindings = bindings.second
+
+    return env.make_child_frame(f, v)
     # END Question 16
 
 SPECIAL_FORMS = {
@@ -410,7 +426,13 @@ class MuProcedure(UserDefinedProcedure):
         self.body = body
 
     # BEGIN Question 17
-    "*** REPLACE THIS LINE ***"
+    def make_call_frame(self, args, env):
+        """Make a frame that binds the my formal parameters to ARGS, a
+        Scheme list of values, for a call evaluated in environment env."""
+        # BEGIN Question 12
+        f = Frame(env)
+        c = f.make_child_frame(self.formals, args)
+        return c
     # END Question 17
 
     def __str__(self):
@@ -426,7 +448,7 @@ def do_mu_form(expressions, env):
     formals = expressions.first
     check_formals(formals)
     # BEGIN Question 17
-    "*** REPLACE THIS LINE ***"
+    return MuProcedure(formals, expressions.second)
     # END Question 17
 
 SPECIAL_FORMS["mu"] = do_mu_form

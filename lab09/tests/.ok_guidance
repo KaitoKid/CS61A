@@ -1,0 +1,1953 @@
+{
+  "dictAssessId2WA2DictInfo": {
+    "scm> ((composed add-one multiply-by-two) 2)\nLOCKED_ANSWER\n": {
+      "['6']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      }
+    },
+    "scm> ((composed multiply-by-two (composed add-one add-one)) 2)\nLOCKED_ANSWER\n": {
+      "['6']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      }
+    },
+    "scm> (+ 3 5)\n8\nscm> (- 10 4)\n6\nscm> (* 7 6)\n42\nscm> (/ 28 2)\n14\nscm> (+ 1 2 3 4)\nLOCKED_ANSWER\nscm> (/ 8 2 2)\nLOCKED_ANSWER\nscm> (quotient 29 5)\nLOCKED_ANSWER\nscm> (remainder 29 5)\nLOCKED_ANSWER\n": {
+      "['Error']": {
+        "dictMisU2Msg": {
+          "SchemePrefix": 7
+        },
+        "lstMisU": [
+          "SchemePrefix"
+        ]
+      }
+    },
+    "scm> (+ 3 5)\n8\nscm> (- 10 4)\nLOCKED_ANSWER\nscm> (* 7 6)\nLOCKED_ANSWER\nscm> (/ 28 2)\nLOCKED_ANSWER\nscm> (+ 1 2 3 4)\nLOCKED_ANSWER\nscm> (/ 8 2 2)\nLOCKED_ANSWER\nscm> (quotient 29 5)\nLOCKED_ANSWER\nscm> (remainder 29 5)\nLOCKED_ANSWER\n": {
+      "['-6']": {
+        "dictMisU2Msg": {
+          "SchemePrefix": 7
+        },
+        "lstMisU": [
+          "SchemePrefix"
+        ]
+      }
+    },
+    "scm> (= 1 3)\nFalse\nscm> (> 1 3)\nFalse\nscm> (< 1 3)\nTrue\nscm> (<= -1 -1)\nTrue\nscm> (or True False)\nLOCKED_ANSWER\nscm> (and True True)\nLOCKED_ANSWER\nscm> (and True False (/ 1 0))\nLOCKED_ANSWER\nscm> (not True)\nLOCKED_ANSWER\n": {
+      "['#f']": {
+        "dictMisU2Msg": {
+          "ShortCircuitOr": 10
+        },
+        "lstMisU": [
+          "ShortCircuitOr"
+        ]
+      },
+      "['False']": {
+        "dictMisU2Msg": {
+          "ShortCircuitOr": 10
+        },
+        "lstMisU": [
+          "ShortCircuitOr"
+        ]
+      }
+    },
+    "scm> (= 1 3)\nFalse\nscm> (> 1 3)\nFalse\nscm> (< 1 3)\nTrue\nscm> (<= -1 -1)\nTrue\nscm> (or True False)\nTrue\nscm> (and True True)\nLOCKED_ANSWER\nscm> (and True False (/ 1 0))\nLOCKED_ANSWER\nscm> (not True)\nLOCKED_ANSWER\n": {
+      "['False']": {
+        "dictMisU2Msg": {
+          "ShortCircuitAnd": 9
+        },
+        "lstMisU": [
+          "ShortCircuitAnd"
+        ]
+      }
+    },
+    "scm> (= 1 3)\nFalse\nscm> (> 1 3)\nFalse\nscm> (< 1 3)\nTrue\nscm> (<= -1 -1)\nTrue\nscm> (or True False)\nTrue\nscm> (and True True)\nTrue\nscm> (and True False (/ 1 0))\nFalse\nscm> (not True)\nLOCKED_ANSWER\n": {
+      "['#t']": {
+        "dictMisU2Msg": {
+          "Not": 12
+        },
+        "lstMisU": [
+          "Not"
+        ]
+      },
+      "['Error']": {
+        "dictMisU2Msg": {
+          "Not": 12
+        },
+        "lstMisU": [
+          "Not"
+        ]
+      },
+      "['True']": {
+        "dictMisU2Msg": {
+          "Not": 12
+        },
+        "lstMisU": [
+          "Not"
+        ]
+      },
+      "['error']": {
+        "dictMisU2Msg": {
+          "Not": 12
+        },
+        "lstMisU": [
+          "Not"
+        ]
+      },
+      "['nil']": {
+        "dictMisU2Msg": {
+          "SchemeNil": 13
+        },
+        "lstMisU": [
+          "SchemeNil"
+        ]
+      }
+    },
+    "scm> (= 1 3)\nFalse\nscm> (> 1 3)\nFalse\nscm> (< 1 3)\nTrue\nscm> (<= -1 -1)\nTrue\nscm> (or True False)\nTrue\nscm> (and True True)\nTrue\nscm> (and True False (/ 1 0))\nLOCKED_ANSWER\nscm> (not True)\nLOCKED_ANSWER\n": {
+      "['Error']": {
+        "dictMisU2Msg": {
+          "ShortCircuitAnd": 9
+        },
+        "lstMisU": [
+          "ShortCircuitAnd"
+        ]
+      },
+      "['True']": {
+        "dictMisU2Msg": {
+          "ShortCircuitAnd": 9
+        },
+        "lstMisU": [
+          "ShortCircuitAnd"
+        ]
+      }
+    },
+    "scm> (cube 2)\nLOCKED_ANSWER\n": {
+      "['cube']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      }
+    },
+    "scm> (define a '(1))\nLOCKED_ANSWER\nscm> a\nLOCKED_ANSWER\nscm> (define b (cons 2 a))\nLOCKED_ANSWER\nscm> b\nLOCKED_ANSWER\nscm> (define c (list 3 b))\nLOCKED_ANSWER\nscm> c\nLOCKED_ANSWER\nscm> (car c)\nLOCKED_ANSWER\nscm> (cdr c)\nLOCKED_ANSWER\nscm> (car (car (cdr c)))\nLOCKED_ANSWER\nscm> (cdr (car (cdr c)))\nLOCKED_ANSWER\n": {
+      "[\"'1\"]": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(1 nil)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(1']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(1)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(1, nil)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['1']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      }
+    },
+    "scm> (define a '(1))\na\nscm> a\n(1)\nscm> (define b (cons 2 a))\nLOCKED_ANSWER\nscm> b\nLOCKED_ANSWER\nscm> (define c (list 3 b))\nLOCKED_ANSWER\nscm> c\nLOCKED_ANSWER\nscm> (car c)\nLOCKED_ANSWER\nscm> (cdr c)\nLOCKED_ANSWER\nscm> (car (car (cdr c)))\nLOCKED_ANSWER\nscm> (cdr (car (cdr c)))\nLOCKED_ANSWER\n": {
+      "['(2 . (1))']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(2 . 1)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(2 . a)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(2 1)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['2 1']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      }
+    },
+    "scm> (define a '(1))\na\nscm> a\n(1)\nscm> (define b (cons 2 a))\nb\nscm> b\n(2 1)\nscm> (define c (list 3 b))\nLOCKED_ANSWER\nscm> c\nLOCKED_ANSWER\nscm> (car c)\nLOCKED_ANSWER\nscm> (cdr c)\nLOCKED_ANSWER\nscm> (car (car (cdr c)))\nLOCKED_ANSWER\nscm> (cdr (car (cdr c)))\nLOCKED_ANSWER\n": {
+      "['(3 (2 1))']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(3 (2.1))']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(3 2 1)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(3.2 1)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      }
+    },
+    "scm> (define a '(1))\na\nscm> a\n(1)\nscm> (define b (cons 2 a))\nb\nscm> b\n(2 1)\nscm> (define c (list 3 b))\nc\nscm> c\n(3 (2 1))\nscm> (car c)\n3\nscm> (cdr c)\n((2 1))\nscm> (car (car (cdr c)))\n2\nscm> (cdr (car (cdr c)))\nLOCKED_ANSWER\n": {
+      "['((1))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(2)']": {
+        "dictMisU2Msg": {
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr"
+        ]
+      },
+      "['(2,1)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(cdr (car (cdr c)))']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['1']": {
+        "dictMisU2Msg": {
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr"
+        ]
+      },
+      "['2']": {
+        "dictMisU2Msg": {
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr"
+        ]
+      },
+      "['Error']": {
+        "dictMisU2Msg": {
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr"
+        ]
+      },
+      "['a']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      }
+    },
+    "scm> (define a '(1))\na\nscm> a\n(1)\nscm> (define b (cons 2 a))\nb\nscm> b\n(2 1)\nscm> (define c (list 3 b))\nc\nscm> c\n(3 (2 1))\nscm> (car c)\n3\nscm> (cdr c)\n((2 1))\nscm> (car (car (cdr c)))\nLOCKED_ANSWER\nscm> (cdr (car (cdr c)))\nLOCKED_ANSWER\n": {
+      "['(1)']": {
+        "dictMisU2Msg": {
+          "SchemeCar": 0
+        },
+        "lstMisU": [
+          "SchemeCar"
+        ]
+      },
+      "['1']": {
+        "dictMisU2Msg": {
+          "SchemeCar": 0
+        },
+        "lstMisU": [
+          "SchemeCar"
+        ]
+      },
+      "['Error']": {
+        "dictMisU2Msg": {
+          "SchemeCar": 0
+        },
+        "lstMisU": [
+          "SchemeCar"
+        ]
+      },
+      "['error']": {
+        "dictMisU2Msg": {
+          "SchemeCar": 0
+        },
+        "lstMisU": [
+          "SchemeCar"
+        ]
+      }
+    },
+    "scm> (define a '(1))\na\nscm> a\n(1)\nscm> (define b (cons 2 a))\nb\nscm> b\n(2 1)\nscm> (define c (list 3 b))\nc\nscm> c\n(3 (2 1))\nscm> (car c)\n3\nscm> (cdr c)\nLOCKED_ANSWER\nscm> (car (car (cdr c)))\nLOCKED_ANSWER\nscm> (cdr (car (cdr c)))\nLOCKED_ANSWER\n": {
+      "[\"'(2 1)\"]": {
+        "dictMisU2Msg": {
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr"
+        ]
+      },
+      "['( 2 1)']": {
+        "dictMisU2Msg": {
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr"
+        ]
+      },
+      "['(2 1 ())']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4
+        },
+        "lstMisU": [
+          "SchemeEmpty"
+        ]
+      },
+      "['(2 1 )']": {
+        "dictMisU2Msg": {
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr"
+        ]
+      },
+      "['(2 1)']": {
+        "dictMisU2Msg": {
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr"
+        ]
+      },
+      "['(2, 1)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(b)']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['(list 2 1)']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['2 1']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['3']": {
+        "dictMisU2Msg": {
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr"
+        ]
+      },
+      "['Erroe']": {
+        "dictMisU2Msg": {
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr"
+        ]
+      },
+      "['Error']": {
+        "dictMisU2Msg": {
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr"
+        ]
+      },
+      "['b']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11,
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr",
+          "EvalExpr"
+        ]
+      },
+      "['error']": {
+        "dictMisU2Msg": {
+          "SchemeCdr": 1
+        },
+        "lstMisU": [
+          "SchemeCdr"
+        ]
+      }
+    },
+    "scm> (define a '(1))\na\nscm> a\n(1)\nscm> (define b (cons 2 a))\nb\nscm> b\n(2 1)\nscm> (define c (list 3 b))\nc\nscm> c\n(3 (2 1))\nscm> (car c)\nLOCKED_ANSWER\nscm> (cdr c)\nLOCKED_ANSWER\nscm> (car (car (cdr c)))\nLOCKED_ANSWER\nscm> (cdr (car (cdr c)))\nLOCKED_ANSWER\n": {
+      "['((2 1))']": {
+        "dictMisU2Msg": {
+          "SchemeCar": 0
+        },
+        "lstMisU": [
+          "SchemeCar"
+        ]
+      },
+      "['(2 1)']": {
+        "dictMisU2Msg": {
+          "SchemeCar": 0
+        },
+        "lstMisU": [
+          "SchemeCar"
+        ]
+      },
+      "['b']": {
+        "dictMisU2Msg": {
+          "SchemeCar": 0
+        },
+        "lstMisU": [
+          "SchemeCar"
+        ]
+      }
+    },
+    "scm> (define a '(1))\na\nscm> a\n(1)\nscm> (define b (cons 2 a))\nb\nscm> b\n(2 1)\nscm> (define c (list 3 b))\nc\nscm> c\nLOCKED_ANSWER\nscm> (car c)\nLOCKED_ANSWER\nscm> (cdr c)\nLOCKED_ANSWER\nscm> (car (car (cdr c)))\nLOCKED_ANSWER\nscm> (cdr (car (cdr c)))\nLOCKED_ANSWER\n": {
+      "['( 3 2 1 )']": {
+        "dictMisU2Msg": {
+          "SchemeList": 5
+        },
+        "lstMisU": [
+          "SchemeList"
+        ]
+      },
+      "['(3 (2 . 1))']": {
+        "dictMisU2Msg": {
+          "SchemeCons": 2
+        },
+        "lstMisU": [
+          "SchemeCons"
+        ]
+      },
+      "['(3 . (2 1))']": {
+        "dictMisU2Msg": {
+          "SchemeList": 5
+        },
+        "lstMisU": [
+          "SchemeList"
+        ]
+      },
+      "['(3 . b)']": {
+        "dictMisU2Msg": {
+          "SchemeList": 5
+        },
+        "lstMisU": [
+          "SchemeList"
+        ]
+      },
+      "['(3 .b)']": {
+        "dictMisU2Msg": {
+          "SchemeList": 5
+        },
+        "lstMisU": [
+          "SchemeList"
+        ]
+      },
+      "['(3 2 1)']": {
+        "dictMisU2Msg": {
+          "SchemeList": 5
+        },
+        "lstMisU": [
+          "SchemeList"
+        ]
+      },
+      "['(3 b)']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['(3, 2 1)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(3.2 1)']": {
+        "dictMisU2Msg": {
+          "SchemeList": 5
+        },
+        "lstMisU": [
+          "SchemeList"
+        ]
+      },
+      "['(list 3 b']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['(list 3 b)']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['3 2 1']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      }
+    },
+    "scm> (define a '(1))\na\nscm> a\n(1)\nscm> (define b (cons 2 a))\nb\nscm> b\nLOCKED_ANSWER\nscm> (define c (list 3 b))\nLOCKED_ANSWER\nscm> c\nLOCKED_ANSWER\nscm> (car c)\nLOCKED_ANSWER\nscm> (cdr c)\nLOCKED_ANSWER\nscm> (car (car (cdr c)))\nLOCKED_ANSWER\nscm> (cdr (car (cdr c)))\nLOCKED_ANSWER\n": {
+      "['(2 ((1)))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(2 (1))']": {
+        "dictMisU2Msg": {
+          "SchemeCons": 2
+        },
+        "lstMisU": [
+          "SchemeCons"
+        ]
+      },
+      "['(2 (a))']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11,
+          "SchemeCons": 2
+        },
+        "lstMisU": [
+          "EvalExpr",
+          "SchemeCons"
+        ]
+      },
+      "['(2 . ((1)))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(2 . (1))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(2 . (a))']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "EvalExpr",
+          "SchemeSyntax"
+        ]
+      },
+      "['(2 . 1)']": {
+        "dictMisU2Msg": {
+          "SchemeCons": 2
+        },
+        "lstMisU": [
+          "SchemeCons"
+        ]
+      },
+      "['(2 . a)']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['(2 a )']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['(2 a)']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['(2)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(2, (1))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(2, 1']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(2, 1)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(2,1)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(2. (1))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(2. a)']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "EvalExpr",
+          "SchemeSyntax"
+        ]
+      },
+      "['(2.(1))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(2.1)']": {
+        "dictMisU2Msg": {
+          "SchemeList": 5,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeList",
+          "SchemeSyntax"
+        ]
+      },
+      "['(2.a)']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "EvalExpr",
+          "SchemeSyntax"
+        ]
+      },
+      "['2 . (1)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['2 . 1']": {
+        "dictMisU2Msg": {
+          "SchemeList": 5,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeList",
+          "SchemeSyntax"
+        ]
+      },
+      "['2 . a']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "EvalExpr",
+          "SchemeSyntax"
+        ]
+      },
+      "['2 . a)']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['2 .a']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "EvalExpr",
+          "SchemeSyntax"
+        ]
+      },
+      "['2.1']": {
+        "dictMisU2Msg": {
+          "SchemeCons": 2,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax",
+          "SchemeCons"
+        ]
+      },
+      "['2.a']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "EvalExpr",
+          "SchemeSyntax"
+        ]
+      },
+      "['[2.a]']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      }
+    },
+    "scm> (define a '(1))\na\nscm> a\nLOCKED_ANSWER\nscm> (define b (cons 2 a))\nLOCKED_ANSWER\nscm> b\nLOCKED_ANSWER\nscm> (define c (list 3 b))\nLOCKED_ANSWER\nscm> c\nLOCKED_ANSWER\nscm> (car c)\nLOCKED_ANSWER\nscm> (cdr c)\nLOCKED_ANSWER\nscm> (car (car (cdr c)))\nLOCKED_ANSWER\nscm> (cdr (car (cdr c)))\nLOCKED_ANSWER\n": {
+      "[\"'(1)\"]": {
+        "dictMisU2Msg": {
+          "SchemeQuote": 8
+        },
+        "lstMisU": [
+          "SchemeQuote"
+        ]
+      },
+      "[\"'1\"]": {
+        "dictMisU2Msg": {
+          "SchemeQuote": 8
+        },
+        "lstMisU": [
+          "SchemeQuote"
+        ]
+      },
+      "['(1 nil)']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4
+        },
+        "lstMisU": [
+          "SchemeEmpty"
+        ]
+      },
+      "['1']": {
+        "dictMisU2Msg": {
+          "SchemeQuote": 8,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeQuote",
+          "SchemeSyntax"
+        ]
+      }
+    },
+    "scm> (define x 3)\nLOCKED_ANSWER\nscm> x\nLOCKED_ANSWER\nscm> (define y (+ x 4))\nLOCKED_ANSWER\nscm> y\nLOCKED_ANSWER\n": {
+      "[\"nil'\"]": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['()']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(3)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(= x 3)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(Nil)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(define x 3)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['(x 3)']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['3']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['Error']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['False']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['Nil']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['Trie']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['True']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['define x 3']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['define']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['nil']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['x 3']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['x = 3']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['x == 3']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['x=3']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      }
+    },
+    "scm> (define x 3)\nx\nscm> x\n3\nscm> (define y (+ x 4))\nLOCKED_ANSWER\nscm> y\nLOCKED_ANSWER\n": {
+      "['function']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['t']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      }
+    },
+    "scm> (define x 3)\nx\nscm> x\n3\nscm> (define y (+ x 4))\ny\nscm> y\nLOCKED_ANSWER\n": {
+      "['(+ x 4)']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['(4 + x)']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['(x + 4)']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['4+x']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['Error']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['Function']": {
+        "dictMisU2Msg": {
+          "SchemeDefine": 3
+        },
+        "lstMisU": [
+          "SchemeDefine"
+        ]
+      },
+      "['x + 4']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['x+4']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      }
+    },
+    "scm> (remove 3 nil)\nLOCKED_ANSWER\n": {
+      "['(nil)']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4
+        },
+        "lstMisU": [
+          "SchemeEmpty"
+        ]
+      }
+    },
+    "scm> lst\nLOCKED_ANSWER\n": {
+      "[\"'((1) 2 (3 4) 5)\"]": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "[\"'(1 2 (3 4) 5)\"]": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "[\"((1 '()) 2 (3 4) 5 '())\"]": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeEmpty",
+          "SchemeSyntax"
+        ]
+      },
+      "['( (1) (2 ( (3.4) (5)))))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['( (1) (2 ((3 4) (5)) )))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['( (1) 2 ( 3. 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['( (1) 2 (3 . 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['( (1) 2 (3.4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(( 1) 2( 3.4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(((1) 2 (3 4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1 (())(2 (()) ((3 4)) (5 (())))))']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeEmpty",
+          "SchemeSyntax"
+        ]
+      },
+      "['((1 ()) (2 ((3 4) (5 ()))))']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeEmpty",
+          "SchemeSyntax"
+        ]
+      },
+      "['((1 ()) 2 (3 4) 5 ())']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeEmpty",
+          "SchemeSyntax"
+        ]
+      },
+      "['((1 2 ((3 4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1 2(3.4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1 nil) (2 ((3 . 4) (5 nil))))']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4
+        },
+        "lstMisU": [
+          "SchemeEmpty"
+        ]
+      },
+      "['((1 nil) 2 (3 4) 5 nil)']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeEmpty",
+          "SchemeSyntax"
+        ]
+      },
+      "['((1 nil) 2 (3 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeEmpty",
+          "SchemeSyntax"
+        ]
+      },
+      "['((1(())) (( 2 ((3 4) (5 (())) ))))']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax",
+          "SchemeEmpty"
+        ]
+      },
+      "['((1() 2 (3 4) 5 ())']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax",
+          "SchemeEmpty"
+        ]
+      },
+      "['((1()) 2 (3 4) 5 ())']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax",
+          "SchemeEmpty"
+        ]
+      },
+      "['((1())(2((3 4) (5 ()))']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax",
+          "SchemeEmpty"
+        ]
+      },
+      "['((1) (( 2 ((3 4) (5))))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) ((2 ((3 4) (5))))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 ((3 . 4) (5))))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 ((3 . 4)(5))))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 ((3 .4) ((5)))))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 ((3 4) (5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 ((3 4) (5))))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 ((3 4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 ((3 4) 5)))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 ((3 4) 5))))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 (3 . 4) (5)))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 (3 . 4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 (3 4) (5)))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 (3 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 (3 4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 (3.4) (5 )))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2 (3.4) (5)))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2) (3 . 4) (5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) (2) (3 4) (5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) . 2 (3 4) . (5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 ( 3. 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 ((3 . 4) (5)))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 ((3 . 4)(5)))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 ((3 . 4)5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 ((3 4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 ((3.4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3 (4)) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3 . 4) (5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3 . 4) 5 nil)']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4
+        },
+        "lstMisU": [
+          "SchemeEmpty"
+        ]
+      },
+      "['((1) 2 (3 . 4) 5']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3 . 4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3 . 4)5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3 .4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3 4 (5)))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3 4) (5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3 4) 5 nil)']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeEmpty",
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3 4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3. 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3.4) (5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 (3.4) 5 ())']": {
+        "dictMisU2Msg": {
+          "SchemeEmpty": 4,
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax",
+          "SchemeEmpty"
+        ]
+      },
+      "['((1) 2 (3.4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2 3.4 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2( 3. 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2( 3.4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2(3 . 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2(3 .4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2(3. 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2(3.4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1) 2(3.4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1)(2 (3 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1)2(3 . 4)5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1)2(3 .4)5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1)2(3. 4)5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1)2(3.4)5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['((1,) 2 (3 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(1 (2 ((3 4) (5))))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(1 (2 ((3.4) (5))))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(1 (2 (3 4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(1 2 ((3 4) 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(1 2 (3 . 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(1 2 (3 4 5))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(1 2 (3 4) 5']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(1 2 (3 4) 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(1 2 3 . 4 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(1 2 3 4 5 )']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(1 2 3 4 5)']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(1) (2 ((3 . 4) (5)))']": {
+        "dictMisU2Msg": {
+          "SchemeSyntax": 6
+        },
+        "lstMisU": [
+          "SchemeSyntax"
+        ]
+      },
+      "['(cons (cons 1 nil) (cons 2 (cons (cons 3 4) (cons 5 nil))))']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['(cons (cons 1 nil) (cons 2 (cons (cons 3 4) (cons 5 nil)))))']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      },
+      "['lst']": {
+        "dictMisU2Msg": {
+          "EvalExpr": 11
+        },
+        "lstMisU": [
+          "EvalExpr"
+        ]
+      }
+    }
+  },
+  "dictId2Msg": {
+    "0": "In Scheme, the | car | statement lets the user get the \"first\" element from a linked list.",
+    "1": "In Scheme, the | cdr | statement lets the user get the \"rest\" of the linked list, which can be a pointer to another list, or a value.",
+    "2": "In Scheme, the | cons | statement takes two arguments to form a pair. The first\nargument is in the | car | field and the second is in the | cdr | field.\n\n> (cons 1 2)\n(1 . 2)\n\nStructure:\n+-------+\n| 1 | 2 |\n+-------+",
+    "3": "In Scheme, the | define | special form defines procedures and variables. Remember\nthat when a procedure or variable is defined, its name is displayed in the\ninterpreter.\n\nStructure:\n(define <variable name> <value>)\n(define (<procedure name> <args>) <procedure body>)",
+    "4": "In Scheme, an empty list can be represented as | () | or | nil |.",
+    "5": "The Scheme procedure | list | takes zero or more arguments and returns a list of\nits arguments. Each argument is in the car field of each list element.\n\n> (list 1 2 3)\n(1 2 3)\n\nStructure:\n+-------+  +-------+  +-------+\n| 1 | x--> | 2 | x--> | 3 | \\ |\n+-------+  +-------+  +-------+",
+    "6": "Scheme lists and procedure calls are surrounded by parenthesis. Respectively,\nthe elements of a list and the procedure name and arguments are separated by\nspaces.\n\nIn general, the rule for displaying a pair is as follows: use the\ndot to separate the car and cdr fields of a pair, but if the dot is immediately\nfollowed by an open parenthesis, then remove the dot and the parenthesis pair.\nThus, (0 . (1 . 2)) becomes (0 1 . 2)",
+    "7": "Scheme call expressions follow a prefix notation, where an operator is followed\nby zero or more operand subexpressions. Operators may be symbols, such as + and *,\nor procedure names such as | list |. An example is | (+ 1 2 3) |.",
+    "8": "In Scheme, any expression that is not evaluated is quoted, making it symbolized.\n\n> (define b 3)\nb\n> (define a 'b)\na\n> a\nb               ; a is not 3\n\nQuotation also allows us to construct a list of quoted elements, using the\nconventional printed representation for lists. For example, | '(a b c) | returns a\nlist (a b c).",
+    "9": "Consider the expression | <A> and <B> |.\n\nSince | and | immediately returns or \"short-circuits\" at false-y values, if the\nresult of <A> is a false-y value v, then the whole expression evalutes to v.\nOtherwise, the expression evaluates to the value of the subexpression <B>.",
+    "10": "Consider the expression | <A> or <B> |.\n\nSince | or | immediately returns or \"short-circuits\" at truth-y values, if the\nresult of <A> is a truth-y value v, then the whole expression evalutes to v.\nOtherwise, the expression evaluates to the value of the subexpression <B>.",
+    "11": "An expression is a combination of values, variables, operators, and functions\nthat the programming language interprets and evaluates to the simplest value. In\nthe Python or Scheme interpreter, an expression entered is evaluated\ninteractively.\n\n>>> True        # True is a primitive value\nTrue\n>>> square(2)   # Python evaluates the call expression of `square`\n4",
+    "12": "The boolean | not | operator is used to negate or reverse the boolean value of\nits operand or preceding expression. Consider the following WWPP and WWSP\nrespectively:\n\n>>> not 0       # 0 is a \"false-y\" value in Python\nTrue\n>>> not True\nFalse\n\nscm> (not 0)    ; 0 is a \"truth-y\" value in Scheme\nFalse\nscm> (not #t)\nFalse",
+    "13": "In Scheme, the empty list is a null pointer value and is displayed as | () |.\nIt's the equivalent to | None | in Python. The empty list is created either\nusing | nil | or the quote form | '() |. Because the empty list is not a Scheme\npair, calling | car | and | cdr | on it results in an error. In addition, Scheme\nprovides a | null? | procedure to check whether a value is (a pointer to) the\nempty list.\n\nStructure:\n+---+\n| \\ |\n+---+"
+  },
+  "dictTg2Func": {
+    "0": "None",
+    "1": "misU2Msg"
+  },
+  "wrongAnsThresh": 2
+}

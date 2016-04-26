@@ -8,7 +8,15 @@
   'REPLACE-THIS-LINE)
 
 (define (cons-all first rests)
-  'REPLACE-THIS-LINE)
+  (if (null? rests)
+    nil
+    (cons
+      (cons first (car rests))
+      (cons-all first (cdr rests))
+    )
+  )
+)
+
 
 (define (zip pairs)
   'REPLACE-THIS-LINE)
@@ -17,7 +25,12 @@
 ;; Returns a list of two-element lists
 (define (enumerate s)
   ; BEGIN Question 18
-  'REPLACE-THIS-LINE
+    (define (helper s i)
+      (if (null? s)
+        nil
+        (cons (cons i (cons (car s) nil)) (helper (cdr s) (+ 1 i))))
+    )
+    (helper s 0)
   )
   ; END Question 18
 
@@ -25,8 +38,19 @@
 ;; List all ways to make change for TOTAL with DENOMS
 (define (list-change total denoms)
   ; BEGIN Question 19
-  'REPLACE-THIS-LINE
+  (cond
+    ((< total 0) nil)
+    ((= total 0) (list nil))
+    ((null? denoms) nil)
+    (else
+      (append
+        (cons-all (car denoms) (list-change (- total (car denoms)) denoms))
+        (list-change total (cdr denoms))
+      )
+    )
   )
+
+)
   ; END Question 19
 
 ;; Problem 20
@@ -80,4 +104,3 @@
   'REPLACE-THIS-LINE
   )
   ; END Question 21
-
